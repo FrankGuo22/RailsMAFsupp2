@@ -1,0 +1,745 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 17:24:35 +0000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (109.3ms)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProducts (20151127171235)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127171235"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateMyproducts (20151127171431)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "myproducts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "image_url" varchar, "price" decimal, "bottle_size" varchar, "company" varchar, "country" varchar, "grape_type" varchar, "suit_vegetarian" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127171431"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateOrderdisplays (20151127171528)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "orderdisplays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127171528"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateOrders (20151127171541)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127171541"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreateLineItems (20151127171554)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127171554"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 17:24:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.6ms)
+Completed 200 OK in 15ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hels" for 127.0.0.1 at 2015-11-27 17:24:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/hels"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.4ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:24:59 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1879ms (Views: 1641.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/orderdisplays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-27 17:25:01 +0000
+
+
+Started GET "/assets/scaffolds.self-a14ec1929c12ef46f11cfe26c81f537d4181de10f9ca7fac06939c44b57d334a.css?body=1" for 127.0.0.1 at 2015-11-27 17:25:01 +0000
+
+
+Started GET "/assets/orderdisplays.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-27 17:25:01 +0000
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:25:01 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 140ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:25:15 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 153ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:25:20 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 98ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-11-27 17:25:25 +0000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered products/_form.html.erb (19.1ms)
+  Rendered products/edit.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 70ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-11-27 17:25:28 +0000
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+QLGYv5I5yeM+eb1ScoAyNgqrmAJ7BoIXzgnD4u7j894qwrcx2EtaSgkkk/sgpAnkuRjGwczk4cgJDJlghq6Lw==", "product"=>{"title"=>"0000lalalalallalalalal00", "description"=>"000000", "image_url"=>"arco-urfass_thumb180.jpg", "price"=>"36.55", "bottle_size"=>"large", "company"=>"Ass2", "country"=>"China", "grape_type"=>"White", "suit_vegetarian"=>"Yes"}, "commit"=>"Update Product", "id"=>"1"}
+Redirected to http://localhost:5000/products/1
+Completed 302 Found in 44ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-11-27 17:25:29 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:25:30 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 97ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/products/1" for 127.0.0.1 at 2015-11-27 17:25:34 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QdhvpaKmp2TDtVqB9sJcDDZxCoX8okRaGVQtMwUR64vAcaMbm49tKmdoLjtTiszjfL/H/vJ9zdVmSDhZDLDeaw==", "id"=>"1"}
+Redirected to http://localhost:5000/products
+Completed 302 Found in 33ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:25:34 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 99ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:25:49 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 17:25:50 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (3.3ms)
+  Rendered products/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/myproducts" for 127.0.0.1 at 2015-11-27 17:26:08 +0000
+Processing by MyproductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4LLbYPtkAugIqMCD8viLohulbRtAoAdVphShWwUz1+WKwfTusRaRQT/17iqg3LBwqBYz2PdCZIphEfvZbX6vw==", "myproduct"=>{"title"=>"Chh", "description"=>"sda", "image_url"=>"1.png", "price"=>"2.3", "bottle_size"=>"fdsa", "company"=>"fds", "country"=>"fds", "grape_type"=>"fds", "suit_vegetarian"=>"fsad"}, "commit"=>"Create Myproduct"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "myproducts" ("title", "description", "image_url", "price", "bottle_size", "company", "country", "grape_type", "suit_vegetarian", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Chh"], ["description", "sda"], ["image_url", "1.png"], ["price", 2.3], ["bottle_size", "fdsa"], ["company", "fds"], ["country", "fds"], ["grape_type", "fds"], ["suit_vegetarian", "fsad"], ["created_at", "2015-11-27 17:26:08.808435"], ["updated_at", "2015-11-27 17:26:08.808435"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:5000/myproducts/1
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/myproducts/1" for 127.0.0.1 at 2015-11-27 17:26:08 +0000
+Processing by MyproductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMyproduct Load (0.3ms)[0m  [1mSELECT  "myproducts".* FROM "myproducts" WHERE "myproducts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered myproducts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/myproducts/1/edit" for 127.0.0.1 at 2015-11-27 17:26:11 +0000
+Processing by MyproductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMyproduct Load (0.1ms)[0m  SELECT  "myproducts".* FROM "myproducts" WHERE "myproducts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered myproducts/_form.html.erb (5.5ms)
+  Rendered myproducts/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/myproducts/1" for 127.0.0.1 at 2015-11-27 17:26:21 +0000
+Processing by MyproductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"82c7VV/1YmtOAJH64mYM5ILfGyp5hrC90Ls2xPMhkAZyzvfrZtyoJerd5UBHLpwLyBHWUXdZOTKvpyOu+oCl5g==", "myproduct"=>{"title"=>"Chh", "description"=>"sda", "image_url"=>"1.png", "price"=>"2.3", "bottle_size"=>"fdsa", "company"=>"Ass3", "country"=>"fds", "grape_type"=>"fds", "suit_vegetarian"=>"fsad"}, "commit"=>"Update Myproduct", "id"=>"1"}
+  [1m[36mMyproduct Load (0.1ms)[0m  [1mSELECT  "myproducts".* FROM "myproducts" WHERE "myproducts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "myproducts" SET "company" = ?, "updated_at" = ? WHERE "myproducts"."id" = ?[0m  [["company", "Ass3"], ["updated_at", "2015-11-27 17:26:21.304735"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:5000/myproducts/1
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/myproducts/1" for 127.0.0.1 at 2015-11-27 17:26:21 +0000
+Processing by MyproductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMyproduct Load (0.1ms)[0m  [1mSELECT  "myproducts".* FROM "myproducts" WHERE "myproducts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered myproducts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/myproducts" for 127.0.0.1 at 2015-11-27 17:26:23 +0000
+Processing by MyproductsController#index as HTML
+  [1m[35mMyproduct Load (0.1ms)[0m  SELECT "myproducts".* FROM "myproducts"
+  Rendered myproducts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:26:30 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 17:26:50 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (4.4ms)
+  Rendered products/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/myproducts" for 127.0.0.1 at 2015-11-27 17:27:11 +0000
+Processing by MyproductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hNY84wQU4CHOqFsOsZnrC/iEAvb8dCBgd35404OAfLQFf/BdPT0qb2p1L7QU0XvkskrPjfKrqe8IYm25iiFJVA==", "myproduct"=>{"title"=>"234", "description"=>"423", "image_url"=>"2.png", "price"=>"3.4", "bottle_size"=>"234", "company"=>"Ass3", "country"=>"china", "grape_type"=>"wre", "suit_vegetarian"=>"rew"}, "commit"=>"Create Myproduct"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "myproducts" ("title", "description", "image_url", "price", "bottle_size", "company", "country", "grape_type", "suit_vegetarian", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "234"], ["description", "423"], ["image_url", "2.png"], ["price", 3.4], ["bottle_size", "234"], ["company", "Ass3"], ["country", "china"], ["grape_type", "wre"], ["suit_vegetarian", "rew"], ["created_at", "2015-11-27 17:27:11.052106"], ["updated_at", "2015-11-27 17:27:11.052106"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:5000/myproducts/2
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/myproducts/2" for 127.0.0.1 at 2015-11-27 17:27:11 +0000
+Processing by MyproductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMyproduct Load (0.1ms)[0m  SELECT  "myproducts".* FROM "myproducts" WHERE "myproducts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered myproducts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/myproducts" for 127.0.0.1 at 2015-11-27 17:27:12 +0000
+Processing by MyproductsController#index as HTML
+  [1m[36mMyproduct Load (0.1ms)[0m  [1mSELECT "myproducts".* FROM "myproducts"[0m
+  Rendered myproducts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:27:16 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 122ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:28:05 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 69ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 17:28:06 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (8.8ms)
+  Rendered products/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 62ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/myproducts" for 127.0.0.1 at 2015-11-27 17:28:20 +0000
+Processing by MyproductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BLIn8tieE2olMiIdNMOJwiLmbanJoCK0q+oLLHIZwn6FG+tM4bfZJIHvVqeRixktaCig0sd/qzvU9h5Ge7j3ng==", "myproduct"=>{"title"=>"324", "description"=>"432", "image_url"=>"2.png", "price"=>"2.5", "bottle_size"=>"sf", "company"=>"Ass3", "country"=>"fasd", "grape_type"=>"fsd", "suit_vegetarian"=>"fsda"}, "commit"=>"Create Myproduct"}
+Redirected to http://localhost:5000/products/46
+Completed 302 Found in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products/46" for 127.0.0.1 at 2015-11-27 17:28:20 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"46"}
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 54ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:28:22 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:28:25 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 17:29:27 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (2.9ms)
+  Rendered products/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 17:32:08 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:32:12 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 17:32:19 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 77ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:34:25 +0000
+Processing by OrderdisplaysController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+ActiveResource::UnauthorizedAccess (Failed.  Response code = 401.  Response message = Unauthorized.):
+  app/controllers/orderdisplays_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.3ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:34:48 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 184ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:35:21 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 94ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:35:33 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 107ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 17:38:22 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 107ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-11-27 19:34:25 +0000
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 168ms (Views: 143.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/myproducts" for 127.0.0.1 at 2015-11-27 19:35:08 +0000
+Processing by MyproductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rCbLLKp5ohYB4bVo+ZZrcZeWQyXpGuflh0mMRsEULFQtjweSk1BoWKU8wdJc3vue3ViOXufFbmr4VZksyLUZtA==", "myproduct"=>{"title"=>"3243333", "description"=>"423", "image_url"=>"arco-urfass_thumb180.jpg", "price"=>"2.5", "bottle_size"=>"234", "company"=>"Ass3", "country"=>"342", "grape_type"=>"423", "suit_vegetarian"=>"sd"}, "commit"=>"Create Myproduct"}
+Redirected to http://localhost:5000/products/42
+Completed 302 Found in 405ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products/42" for 127.0.0.1 at 2015-11-27 19:35:09 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"42"}
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 436ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:35:11 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 531ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 19:38:47 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 897ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 19:40:50 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 914ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `index_orderdisplay_path' for #<#<Class:0x007fb9d4b6a4a0>:0x007fb9d44815a8>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Listing Our Products</h1>
+    4: <%= link_to 'Check Our Order', index_orderdisplay_path %>
+    5: <table>
+    6:   <thead>
+    7:     <tr>
+  app/views/products/index.html.erb:4:in `_app_views_products_index_html_erb__511485520117244255_70218053541600'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 19:41:22 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 538ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"orderdisplays"} missing required keys: [:id]):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Listing Our Products</h1>
+    4: <%= link_to 'Check Our Order', orderdisplay_path %>
+    5: <table>
+    6:   <thead>
+    7:     <tr>
+  app/views/products/index.html.erb:4:in `_app_views_products_index_html_erb__511485520117244255_70218061089540'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 19:41:25 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"orderdisplays"} missing required keys: [:id]):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Listing Our Products</h1>
+    4: <%= link_to 'Check Our Order', orderdisplay_path %>
+    5: <table>
+    6:   <thead>
+    7:     <tr>
+  app/views/products/index.html.erb:4:in `_app_views_products_index_html_erb__511485520117244255_70218061089540'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-27 19:42:03 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 557ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-11-27 19:42:05 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1302ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/products/41" for 127.0.0.1 at 2015-11-27 19:42:21 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NsS+i0W4VL0OOtCAxTWwVe7Mi1uX5dwfixejkj+GG9m3bXI1fJGe86rnpDpgfSC6pAJGIJk6VZD0C7b4NicuOQ==", "id"=>"41"}
+Redirected to http://localhost:5000/products
+Completed 302 Found in 753ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:21 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 504ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/products/42" for 127.0.0.1 at 2015-11-27 19:42:25 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"21d+60HFTA3D1oJ5pOSKeBCukmQkNhoxE3QF/WPlcPNa/rJVeOyGQ2cL9sMBrBqXWmBfHyrpk75saBCXakRFEw==", "id"=>"42"}
+Redirected to http://localhost:5000/products
+Completed 302 Found in 2259ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:27 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 624ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/products/41" for 127.0.0.1 at 2015-11-27 19:42:30 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oSKQ1egTubNYCxYdaCEoovGu11ommlQwMyZeqbc72kEgi1xr0Tpz/fzWYqfNabhNu2AaIShF3b9MOkvDvprvoQ==", "id"=>"41"}
+Redirected to http://localhost:5000/products
+Completed 302 Found in 939ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:31 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 489ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:34 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 976ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:37 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 441ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/products/41" for 127.0.0.1 at 2015-11-27 19:42:39 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bgstW9bro+Xii5f+nzUpc2jyDXnYQ1Nwq7CCJ/Z2W6jvouHl78Jpq0ZW40Q6fbmcIjzAAtac2v/UrJdN/9duSA==", "id"=>"41"}
+Redirected to http://localhost:5000/products
+Completed 302 Found in 1053ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-11-27 19:42:41 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 467ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-07 00:01:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 306ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/myproducts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-07 00:01:08 +0000
+
+
+Started GET "/assets/orderdisplays.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-07 00:01:08 +0000
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-07 00:01:08 +0000
+
+
+Started GET "/assets/scaffolds.self-a14ec1929c12ef46f11cfe26c81f537d4181de10f9ca7fac06939c44b57d334a.css?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/myproducts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/orderdisplays.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-07 00:01:09 +0000
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-12-07 00:21:20 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 298ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-12-07 00:26:19 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 223ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-07 00:26:49 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 86ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-07 00:40:06 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/46" for 127.0.0.1 at 2015-12-07 00:46:39 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"46"}
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-12-07 00:46:40 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 189ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/46/edit" for 127.0.0.1 at 2015-12-07 00:46:42 +0000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  Rendered products/_form.html.erb (35.1ms)
+  Rendered products/edit.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 141ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/46" for 127.0.0.1 at 2015-12-07 00:46:49 +0000
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oNUDLc9bOfrGWKeuIN0QppLE3BMomu4j3HGDoPGXhoKR4kzPpa+SCc1XfR6MEz3pDNWFqZ4QwxJbEx3n/L7AUA==", "product"=>{"title"=>"324", "description"=>"432", "image_url"=>"2.png", "price"=>"25", "bottle_size"=>"sf", "company"=>"Ass3", "country"=>"fasd", "grape_type"=>"fsd", "suit_vegetarian"=>"fsda"}, "commit"=>"Update Product", "id"=>"46"}
+Redirected to http://localhost:9000/products/46
+Completed 302 Found in 174ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/products/46" for 127.0.0.1 at 2015-12-07 00:46:49 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"46"}
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-12-07 00:46:52 +0000
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 132ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orderdisplays" for 127.0.0.1 at 2015-12-07 00:48:32 +0000
+Processing by OrderdisplaysController#index as HTML
+  Rendered orderdisplays/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 371ms (Views: 150.0ms | ActiveRecord: 0.0ms)
