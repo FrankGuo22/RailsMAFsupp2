@@ -1,6 +1,6 @@
 == README
 
-https://supp2-heroku-gzwnpu.herokuapp.com for this one
+https://supp1-heroku-gzwnpu.herokuapp.com for this one
 
 USAGE
 -------------
