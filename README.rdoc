@@ -4,5 +4,5 @@ https://supp1-heroku-gzwnpu.herokuapp.com for this one
 
 USAGE
 ---------------
-bundle install
+bundle installl
 
